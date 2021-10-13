@@ -60,6 +60,8 @@ python scripts/run_rooms.py --config examples/rooms/discrete_user.yaml
 ### Online Perfect Reward Predictor
 As mentioned in the Project books, one of the experiments was to compare pure sparse reward environment Vs Online Reward Predictor that was trained with accumulated dense reward Online:
 
+![Online Perfect User](https://github.com/Ugadot/New_nlp_rl/blob/master/doc/baseline.png?raw=true)
+
 #### Reward Predictor Training
 In the following graph we can see that the Reward Predictor converged during the agent training
 
