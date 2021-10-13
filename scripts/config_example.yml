@@ -1,0 +1,29 @@
+run_config:
+  algo: ppo
+  num-processes: 16 # Default is 16
+  rooms: 4
+  const-rooms: yes
+  const-goal: yes
+  var-envs: no #Change env between each ppo process
+  rows: 10
+  cols: 10
+  obs-type: 'original' # can be either 'original', 'flat', 'echo_channels'
+results_path: ''
+# Would save as follows:
+#  Reglar_algo_path = <results_path>/reg_algo
+#  RP_train = <results_path>/RP_train
+#  Use_RP = <results_path>/Use_RP
+tests_config:
+  test_stop_point: 50000 # what update number stop test
+  test_type:
+    Regular_algo: #Train regular algorithem without changes
+      run: yes
+      reward_type: 'Regular' # Should be either 'Dijk' or 'Regular'
+    Train_Rp: 
+      run: no
+      reward_type: 'Regular' # Should be either 'Dijk' or 'Regular'
+      train_method: 'offline' # Should be either 'offline' or 'online'
+    Use_RP:
+      run: no
+      reward_type: 'Regular'
+      RP_path: ''

@@ -1,0 +1,57 @@
+log_dir: None
+## rooms env args:
+rooms: 4                                                        # Use rooms in env (if 0 - no rooms), default=4
+const_rooms: True                                              # Keeps env rooms constant - rooms dont change
+const_goal: True                                               # Keeps env constant - goal doesnt change
+obs_type: 'reduced'                                                       # Type of observation to use (flat, original or reduced), default="original"
+rows: 30                                                        # Random rooms map size - rows, default=10
+cols: 30                                                        # Random rooms map size - cols, default=10
+max_steps_fact: 3                                               # Random rooms - max steps = (rows + cols) * fact, default fact=3
+inner_counter_in_state: False                                   # Random rooms - choose if to use 4th observation channel - history
+n_inner_resets: 100000                                            # Random rooms - n episodes of hard reset - changes walls, goal if not const
+far_from_goal: True                                            # Make agent as far from goal as possible
+
+## RL algo args:
+total_timesteps: 1000000
+n_envs: 8                                                       # Numer of envs to run simlutanesoly, default=1
+n_steps: 2400
+# n_steps * n_envs = 19200
+rl_n_epcohs: 50
+rl_batch_size: 128
+
+## Collect data args:
+n_data: 10
+data_size: 1000
+save_images: True                                              # save render images when collecting data
+show_images: False
+
+## Dijkstra args:
+use_dijk_reward: False                                          # Use Dijk Wrapper, or not needed
+dijk_power: 2                                                   # power factor to the dijk reward
+dijk_lambda: 0.1                                                # multiply factor for dijk reward
+
+## Reward Predictor args:
+use_RP: True                                                   # Use RP or not use at all
+RP_path: None                                         # Path to a directory containing only RP models - DO NOT MARK --online_training with this argument
+online_training: perfect_user                               # creates a new Reward Predictor, RP trains online            
+noisy_user: 0                                              # Noise mean to add to the window Automatic reward                                  
+max_user_reward: 10                                             # Range of user reward (0, max_user_reward)
+win_size: 10                                                    # Size of window to use for RP training, default=10
+train_interval: 10                                              # Each {trin_interval} env steps the RP is trained from replay buffer, default=20
+replay_size: 1000                                                # Amount of windows to save in replay buffer for RP to train on, default=100
+var_threshold: 0 #0.005 #0.01  #0.002      # 0.001                                       # Variance threshold of RP models to ask User for input from, default=0.01
+window_ask_p: 0.0                                          # Probability to ask the user about a window even if the conditions are not met, default=0.05
+rp_batch_size: 2                                                # Windows batch size for RP training, default=2
+rp_factor: 0.001                                                 # Multiply factor for predicted reward, default=0.05
+env_max_r: 0                                                    # If not 0, use for RP normaliztion
+predict_with_action: True                                       # If true, use the action as part of the RP input
+rp_norm: False                                                  # If true, normalize RP inputs on when extracting trainng batch
+max_user_windows: 100000000                                     # Number of maximum windows to ask the user for input
+
+
+seed: 12   # 34 36
+## wandb args:
+wandb: RL_with_trajectory_feedback_examples                          # Project name for W&B. Default: Wandb not active
+wandb_group: Perfect_User                                               # Group name for W&B
+wandb_name: Perfect_User_12                                                # Run name for W&B
+
