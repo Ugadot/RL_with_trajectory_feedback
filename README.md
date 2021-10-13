@@ -60,7 +60,7 @@ python scripts/run_rooms.py --config examples/rooms/discrete_user.yaml
 ### Online Perfect Reward Predictor
 As mentioned in the Project books, one of the experiments was to compare pure sparse reward environment Vs Online Reward Predictor that was trained with accumulated dense reward Online:
 
-![Online Perfect User](https://github.com/Ugadot/New_nlp_rl/blob/master/doc/baseline.png?raw=true)
+![Online Perfect User](https://github.com/Ugadot/RL_with_trajectory_feedback/blob/main/doc/RL_Project_Book.pdf?raw=true)
 
 #### Reward Predictor Training
 In the following graph we can see that the Reward Predictor converged during the agent training
@@ -69,16 +69,16 @@ In the following graph we can see that the Reward Predictor converged during the
 
 Sparse Reward environment:
 
-![Sparse Agent Performance](https://github.com/Ugadot/New_nlp_rl/blob/master/doc/sparse.gif "Sparse Reward")
+![Sparse Agent Performance](https://github.com/Ugadot/RL_with_trajectory_feedback/blob/master/doc/sparse.gif "Sparse Reward")
 
 Sparse Reward Environment + "Perfect User" Online trained RP:
 
-![Perfect User RP Agent Performance](https://github.com/Ugadot/New_nlp_rl/blob/master/doc/perfect_user.gif "Perfect User")
+![Perfect User RP Agent Performance](https://github.com/Ugadot/RL_with_trajectory_feedback/blob/master/doc/perfect_user.gif "Perfect User")
 
 
 Sparse Reward Environment + "Discrete User" (+ noise) Online trained RP:
 
-![Discrete User RP Agent Performance](https://github.com/Ugadot/New_nlp_rl/blob/master/doc/discrete_user.gif "Discrete User")
+![Discrete User RP Agent Performance](https://github.com/Ugadot/RL_with_trajectory_feedback/blob/master/doc/discrete_user.gif "Discrete User")
 
 
 
