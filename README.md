@@ -11,7 +11,7 @@ In addition, we showed that by using merely 200 user labeled short sequences, we
 
 ### Project Book
 The full project book can be found in: 
-[Project Book](docs/RL_Project_Book.pdf)
+[Project Book](doc/RL_Project_Book.pdf)
 
 
 ## Get Started
