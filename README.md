@@ -97,6 +97,6 @@ Sparse Reward Environment + "Discrete User" (+ noise) Online trained RP:
 
 ## Authors
 
-RL with trajectory feedback was designed by [Uri Gadot](https://github.com/Ugadot) and [Hagagy Michaeli](https://github.com/hmichaeli)
+RL with trajectory feedback was designed by [Uri Gadot](https://github.com/Ugadot) and [Hagay Michaeli](https://github.com/hmichaeli)
 
 
